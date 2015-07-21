@@ -26,13 +26,20 @@ var sendingAddress = sendingKey.pub.getAddress().toString();
 var b = new Buffer("Thanks Chanman for this Template");
 // creating a new bitcoin transaction
 var t = new bitcoin.Transaction();
+// the amount you are sending to the recieving address
+var sendingAmount = ;
+// the amount you are expecting back in change (FYI the uspent transaction amount > sendingAmount + change)
+// the leftover amount will be your miner fee
+var change = ;
 
 // add input as one of the outputs of a transaction sent to an address you own 
 // second field is the array index of the output of the transaction you control
 t.addInput("insert Transaction Hash Here", 0);
 // add a recieving address and the amount to send them with satoshis
 // you can add as many as you want as long as you have the funds in the inputs
-t.addOutput(recievingPublicAddress, 1000);
+t.addOutput(recievingPublicAddress, sendingAmount);
+// this is the change that you are recieving back
+t.addOutput(sendingAddress, change)
 // add the OP_return 
 t.addOutput(bitcoin.Script.fromChunks([bitcoin.opcodes.OP_RETURN, b]), 0);
 // sign that transaction
