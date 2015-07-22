@@ -131,7 +131,7 @@ chain.getAddressUnspents(bnbA, function(err, resp){
   		console.log("response=" + util.inspect(resp, {depth: null}));
 			});
 
-			// */  delete the '//' infront of this line if you want to submit manually
+			//  delete the '//' infront of this line if you want to submit manually */
 
 		}
 
