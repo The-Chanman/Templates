@@ -1,3 +1,16 @@
+/****************************************************************
+*****************************************************************
+													WARNING:
+			 THIS TEMPLATE HAS BEEN PHASED OUT BUT IS HERE FOR 
+										SENTIMENTAL REASONS
+
+												DO NOT USE
+
+				please use StreamlinedOP_returnTrans.js instead
+*****************************************************************
+****************************************************************/
+
+/*
 var util = require('util');
  
 var bitcoin = require('bitcoinjs-lib');
@@ -52,3 +65,5 @@ chain.sendTransaction(t.toHex(), function(err, resp) {
   console.log("error=" + util.inspect(err));
   console.log("response=" + util.inspect(resp, {depth: null}));
 });
+
+*/
