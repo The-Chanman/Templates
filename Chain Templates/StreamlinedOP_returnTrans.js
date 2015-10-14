@@ -12,6 +12,10 @@ message: 	What you want to be contained inside the OP_return
 					(Due to current bitcoin protocols you can only store
 					40 bytes of infromation inside the OP_return)
 --------------------------------------------------------------------------
+Known Bugs:
+This code will only grab a transaction input if a single input has enough to fulfill the transaction. It
+does not yet combine multiple inputs.
+
 Notes: 
 Pushing the transaction
 -----------------------
